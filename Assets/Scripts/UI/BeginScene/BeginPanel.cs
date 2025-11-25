@@ -28,7 +28,8 @@ public class BeginPanel : BasePanel<BeginPanel>
         this.settingButton.onClick.Add(new EventDelegate(() =>
         {
             // 显示设置面板
-            Debug.Log("Setting Button Clicked: Show Setting Panel");
+            // Debug.Log("Setting Button Clicked: Show Setting Panel");
+            SettingPanel.instance.ShowPanel();
         }));
 
         this.quitButton.onClick.Add(new EventDelegate(() =>

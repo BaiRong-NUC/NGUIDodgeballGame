@@ -24,25 +24,29 @@ public class SettingPanel : BasePanel<SettingPanel>
         this.musicSlider.onChange.Add(new EventDelegate(() =>
         {
             // 调整音乐音量
-            Debug.Log("Music Slider Changed: Volume = " + this.musicSlider.value);
+            // Debug.Log("Music Slider Changed: Volume = " + this.musicSlider.value);
+            DataManage.instance.SetMusicVolume(this.musicSlider.value);
         }));
 
         this.soundSlider.onChange.Add(new EventDelegate(() =>
         {
             // 调整音效音量
-            Debug.Log("Sound Slider Changed: Volume = " + this.soundSlider.value);
+            // Debug.Log("Sound Slider Changed: Volume = " + this.soundSlider.value);
+            DataManage.instance.SetSoundVolume(this.soundSlider.value);
         }));
 
         this.musicToggle.onChange.Add(new EventDelegate(() =>
         {
             // 切换音乐开关
-            Debug.Log("Music Toggle Changed: Is On = " + this.musicToggle.value);
+            // Debug.Log("Music Toggle Changed: Is On = " + this.musicToggle.value);
+            DataManage.instance.SetMusicOnOff(this.musicToggle.value);
         }));
 
         this.soundToggle.onChange.Add(new EventDelegate(() =>
         {
             // 切换音效开关
-            Debug.Log("Sound Toggle Changed: Is On = " + this.soundToggle.value);
+            // Debug.Log("Sound Toggle Changed: Is On = " + this.soundToggle.value);
+            DataManage.instance.SetSoundOnOff(this.soundToggle.value);
         }));
     }
 
@@ -50,11 +54,16 @@ public class SettingPanel : BasePanel<SettingPanel>
     {
         base.ShowPanel();
         // 初始化设置面板的状态
+        this.musicSlider.value = DataManage.instance.musicData.musicVolume;
+        this.soundSlider.value = DataManage.instance.musicData.soundVolume;
+        this.musicToggle.value = DataManage.instance.musicData.isMusicOn;
+        this.soundToggle.value = DataManage.instance.musicData.isSoundOn;
     }
 
     override public void HidePanel()
     {
         base.HidePanel();
         // 保存设置面板的状态
+        DataManage.instance.SaveMusicData();
     }
 }

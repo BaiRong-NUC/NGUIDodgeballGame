@@ -20,6 +20,7 @@ public class DataManage
     {
         this.musicData.musicVolume = volume;
         // 修改音乐音量
+        BkMusic.instance.SetMusicVolume(volume);
     }
 
     public void SetSoundVolume(float volume)
@@ -32,6 +33,7 @@ public class DataManage
     {
         this.musicData.isMusicOn = isOn;
         // 修改音乐开关
+        BkMusic.instance.SetMusicOnOff(isOn);
     }
 
     public void SetSoundOnOff(bool isOn)

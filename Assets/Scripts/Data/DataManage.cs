@@ -6,9 +6,14 @@ public class DataManage
 
     // 音乐数据
     public MusicData musicData;
+
+    // 排行榜数据
+    public RankDatas rankDatas = new RankDatas();
+
     private DataManage()
     {
         this.musicData = XmlDataManage.instance.LoadData(typeof(MusicData), "MusicData") as MusicData;
+        this.rankDatas = XmlDataManage.instance.LoadData(typeof(RankDatas), "RankDatas") as RankDatas;
     }
 
     public void SaveMusicData()
@@ -40,5 +45,27 @@ public class DataManage
     {
         this.musicData.isSoundOn = isOn;
         // 修改音效开关
+    }
+
+    public void SaveRankDatas()
+    {
+        XmlDataManage.instance.SaveData(this.rankDatas, "RankDatas");
+    }
+
+    // 添加排行榜数据
+    public void AddRankData(string userName, int time)
+    {
+        RankData newRankData = new RankData();
+        newRankData.userName = userName;
+        newRankData.time = time;
+        // 按照时间从大到小排列
+        this.rankDatas.rankDataList.Add(newRankData);
+        this.rankDatas.rankDataList.Sort((a, b) => a.time.CompareTo(b.time));
+        // 只保留前20名
+        if (this.rankDatas.rankDataList.Count > 20)
+        {
+            this.rankDatas.rankDataList.RemoveRange(20, this.rankDatas.rankDataList.Count - 20);
+        }
+        SaveRankDatas();
     }
 }

@@ -12,13 +12,13 @@ public class DataManage
 
     private DataManage()
     {
-        this.musicData = XmlDataManage.instance.LoadData(typeof(MusicData), "MusicData") as MusicData;
-        this.rankDatas = XmlDataManage.instance.LoadData(typeof(RankDatas), "RankDatas") as RankDatas;
+        this.musicData = XmlDataManage.instance.LoadData(typeof(MusicData), "MusicData.xml") as MusicData;
+        this.rankDatas = XmlDataManage.instance.LoadData(typeof(RankDatas), "RankDatas.xml") as RankDatas;
     }
 
     public void SaveMusicData()
     {
-        XmlDataManage.instance.SaveData(this.musicData, "MusicData");
+        XmlDataManage.instance.SaveData(this.musicData, "MusicData.xml");
     }
 
     public void SetMusicVolume(float volume)
@@ -49,7 +49,7 @@ public class DataManage
 
     public void SaveRankDatas()
     {
-        XmlDataManage.instance.SaveData(this.rankDatas, "RankDatas");
+        XmlDataManage.instance.SaveData(this.rankDatas, "RankDatas.xml");
     }
 
     // 添加排行榜数据

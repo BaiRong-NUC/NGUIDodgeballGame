@@ -60,7 +60,7 @@ public class DataManage
         newRankData.time = time;
         // 按照时间从大到小排列
         this.rankDatas.rankDataList.Add(newRankData);
-        this.rankDatas.rankDataList.Sort((a, b) => a.time.CompareTo(b.time));
+        this.rankDatas.rankDataList.Sort((a, b) => b.time.CompareTo(a.time));
         // 只保留前20名
         if (this.rankDatas.rankDataList.Count > 20)
         {

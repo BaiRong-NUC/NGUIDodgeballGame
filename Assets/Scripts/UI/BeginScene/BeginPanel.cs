@@ -22,7 +22,8 @@ public class BeginPanel : BasePanel<BeginPanel>
         this.rankButton.onClick.Add(new EventDelegate(() =>
         {
             // 显示排行榜面板
-            Debug.Log("Rank Button Clicked: Show Rank Panel");
+            // Debug.Log("Rank Button Clicked: Show Rank Panel");
+            RankPanel.instance.ShowPanel();
         }));
 
         this.settingButton.onClick.Add(new EventDelegate(() =>

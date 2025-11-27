@@ -55,5 +55,13 @@ public class RankPanel : BasePanel<RankPanel>
                 rankItemObj.transform.localPosition = this.initialItemPosition + new Vector3(0, -(sprite.height - 5) * i, 0);
             }
         }
+
+        // 重置 ScrollView 的滚动位置到初始状态
+        this.rankScrollView.ResetPosition();
+        // 强制 UIPanel 重新计算裁剪区域和子对象的可见性
+        if (this.rankScrollView.panel != null)
+        {
+            this.rankScrollView.panel.Refresh();
+        }
     }
 }

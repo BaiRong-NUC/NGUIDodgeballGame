@@ -14,7 +14,8 @@ public class BeginPanel : BasePanel<BeginPanel>
         this.startButton.onClick.Add(new EventDelegate(() =>
         {
             // 显示选择面板
-            Debug.Log("Start Button Clicked: Show Select Panel");
+            // Debug.Log("Start Button Clicked: Show Select Panel");
+            ChoosePanel.instance.ShowPanel();
             // 隐藏当前面板
             this.HidePanel();
         }));

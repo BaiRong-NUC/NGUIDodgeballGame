@@ -13,6 +13,9 @@ public class DataManage
     // 飞机数据
     public AirPlaneDatas airplaneDatas = new AirPlaneDatas();
 
+    // 当前选择的飞机索引
+    public int currentAirplaneIndex = 0;
+
     private DataManage()
     {
         this.musicData = XmlDataManage.instance.LoadData(typeof(MusicData), "MusicData.xml") as MusicData;
@@ -71,5 +74,11 @@ public class DataManage
             this.rankDatas.rankDataList.RemoveRange(20, this.rankDatas.rankDataList.Count - 20);
         }
         SaveRankDatas();
+    }
+
+    // 获取当前选择的飞机数据
+    public AirplaneData GetCurrentAirplaneData()
+    {
+        return this.airplaneDatas.airplaneDatas[this.currentAirplaneIndex];
     }
 }

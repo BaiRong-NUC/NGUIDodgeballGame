@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AirPlaneDatas>
+    <airplaneDatas>
+        <AirplaneData hp="4" speed="6" volume="5" modelScale="65"
+            resPath="Prefabs/Airplanes/Airplane1" />
+        <AirplaneData hp="2" speed="8" volume="3" modelScale="65"
+            resPath="Prefabs/Airplanes/Airplane2" />
+        <AirplaneData hp="3" speed="7" volume="4" modelScale="65"
+            resPath="Prefabs/Airplanes/Airplane3" />
+        <AirplaneData hp="10" speed="2" volume="8" modelScale="20"
+            resPath="Prefabs/Airplanes/Airplane4" />
+        <AirplaneData hp="8" speed="4" volume="6" modelScale="35"
+            resPath="Prefabs/Airplanes/Airplane5" />
+    </airplaneDatas>
+</AirPlaneDatas>

@@ -10,10 +10,14 @@ public class DataManage
     // 排行榜数据
     public RankDatas rankDatas = new RankDatas();
 
+    // 飞机数据
+    public AirPlaneDatas airplaneDatas = new AirPlaneDatas();
+
     private DataManage()
     {
         this.musicData = XmlDataManage.instance.LoadData(typeof(MusicData), "MusicData.xml") as MusicData;
         this.rankDatas = XmlDataManage.instance.LoadData(typeof(RankDatas), "RankDatas.xml") as RankDatas;
+        this.airplaneDatas = XmlDataManage.instance.LoadData(typeof(AirPlaneDatas), "AirplaneDatas.xml") as AirPlaneDatas;
     }
 
     public void SaveMusicData()

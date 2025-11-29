@@ -81,4 +81,28 @@ public class DataManage
     {
         return this.airplaneDatas.airplaneDatas[this.currentAirplaneIndex];
     }
+
+    // 时间格式化
+    public string FormatTime(int time, bool keepZero = true)
+    {
+        // 时间转换为xxx h xxx min xxx s
+        int hours = (int)(time / 3600);
+        int minutes = (int)((time % 3600) / 60);
+        int seconds = (int)(time % 60);
+        if (!keepZero)
+        {
+            if (hours == 0)
+            {
+                if (minutes == 0)
+                {
+                    return $"{seconds}s";
+                }
+                else
+                {
+                    return $"{minutes}m{seconds}s";
+                }
+            }
+        }
+        return $"{hours}h{minutes}m{seconds}s";
+    }
 }

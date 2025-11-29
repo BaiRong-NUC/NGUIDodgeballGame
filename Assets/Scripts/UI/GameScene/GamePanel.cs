@@ -25,7 +25,7 @@ public class GamePanel : BasePanel<GamePanel>
         this.quitButton.onClick.Add(new EventDelegate(() =>
         {
             // 显示确认退出面板
-            // SceneManager.LoadScene("BeginScene"); 
+            QuitPanel.instance.ShowPanel();
         }));
 
         this.UpdateHp(3);

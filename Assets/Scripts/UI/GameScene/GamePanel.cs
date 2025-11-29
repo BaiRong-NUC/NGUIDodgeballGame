@@ -11,7 +11,8 @@ public class GamePanel : BasePanel<GamePanel>
     public Transform hp;
     private List<Transform> hpList = new List<Transform>();
 
-    private float currentTime = 0f;
+    [HideInInspector]
+    public float currentTime = 0f;
     public override void InitPanel()
     {
         // 初始化血量显示
@@ -35,6 +36,12 @@ public class GamePanel : BasePanel<GamePanel>
     {
         this.currentTime += Time.deltaTime;
         this.timeLabel.text = DataManage.instance.FormatTime((int)this.currentTime, false);
+
+        if(Input.GetMouseButtonDown(0))
+        {
+            // 测试游戏结束面板
+            EndPanel.instance.ShowPanel();
+        }
     }
 
     public void UpdateHp(int hp)

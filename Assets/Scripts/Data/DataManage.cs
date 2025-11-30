@@ -16,11 +16,15 @@ public class DataManage
     // 当前选择的飞机索引
     public int currentAirplaneIndex = 0;
 
+    // 子弹数据
+    public BulletDatas bulletDatas = new BulletDatas();
+
     private DataManage()
     {
         this.musicData = XmlDataManage.instance.LoadData(typeof(MusicData), "MusicData.xml") as MusicData;
         this.rankDatas = XmlDataManage.instance.LoadData(typeof(RankDatas), "RankDatas.xml") as RankDatas;
         this.airplaneDatas = XmlDataManage.instance.LoadData(typeof(AirPlaneDatas), "AirplaneDatas.xml") as AirPlaneDatas;
+        this.bulletDatas = XmlDataManage.instance.LoadData(typeof(BulletDatas), "BulletDatas.xml") as BulletDatas;
     }
 
     public void SaveMusicData()

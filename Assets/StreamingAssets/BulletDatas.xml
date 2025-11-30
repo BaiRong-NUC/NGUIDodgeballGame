@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BulletDatas>
+    <bulletDatas>
+        <!-- 直线移动的子弹 -->
+        <BulletData id="1" moveType="Straight" forwardSpeed="60" rightSpeed="0" routeSpeed="0"
+            bulletPrefabPath="Prefabs/Bullets/Bullet1" hitEffectPrefabPath="Prefabs/Bullet/Hit"
+            lifeTime="8" />
+
+        <!-- 左抛物线移动的子弹 -->
+        <BulletData id="2" moveType="ParabolaLeft" forwardSpeed="50" rightSpeed="5" routeSpeed="0"
+            bulletPrefabPath="Prefabs/Bullets/Bullet2" hitEffectPrefabPath="Prefabs/Bullet/Hit"
+            lifeTime="4" />
+
+        <!-- 右抛物线移动的子弹 -->
+        <BulletData id="3" moveType="ParabolaRight" forwardSpeed="50" rightSpeed="-5" routeSpeed="0"
+            bulletPrefabPath="Prefabs/Bullets/Bullet1" hitEffectPrefabPath="Prefabs/Bullet/Hit"
+            lifeTime="4" />
+
+        <!-- 跟踪子弹 -->
+        <BulletData id="3" moveType="Tracking" forwardSpeed="40" rightSpeed="0" routeSpeed="40"
+            bulletPrefabPath="Prefabs/Bullets/Bullet1" hitEffectPrefabPath="Prefabs/Bullet/Hit"
+            lifeTime="6" />
+    </bulletDatas>
+</BulletDatas>

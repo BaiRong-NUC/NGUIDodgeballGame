@@ -1866,7 +1866,7 @@ GameObject:
   m_Component:
   - component: {fileID: 737188245}
   - component: {fileID: 737188244}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AirplaneCammer
   m_TagString: Untagged
   m_Icon: {fileID: 0}

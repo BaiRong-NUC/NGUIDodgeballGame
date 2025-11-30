@@ -29,7 +29,7 @@ public class GamePanel : BasePanel<GamePanel>
             QuitPanel.instance.ShowPanel();
         }));
 
-        this.UpdateHp(3);
+        // this.UpdateHp(3);
     }
 
     void Update()

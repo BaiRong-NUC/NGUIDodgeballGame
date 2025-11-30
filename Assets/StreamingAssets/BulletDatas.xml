@@ -3,22 +3,27 @@
     <bulletDatas>
         <!-- 直线移动的子弹 -->
         <BulletData id="1" moveType="Straight" forwardSpeed="60" rightSpeed="0" routeSpeed="0"
-            bulletPrefabPath="Prefabs/Bullets/Bullet1" hitEffectPrefabPath="Prefabs/Bullet/Hit"
+            bulletPrefabPath="Prefabs/Bullets/Bullet1" hitEffectPrefabPath="Prefabs/Bullets/Hit"
             lifeTime="8" />
 
-        <!-- 左抛物线移动的子弹 -->
-        <BulletData id="2" moveType="ParabolaLeft" forwardSpeed="50" rightSpeed="5" routeSpeed="0"
-            bulletPrefabPath="Prefabs/Bullets/Bullet2" hitEffectPrefabPath="Prefabs/Bullet/Hit"
-            lifeTime="4" />
+        <!-- Sin曲线移动子弹 -->
+        <BulletData id="2" moveType="Sin" forwardSpeed="50" rightSpeed="4" routeSpeed="20"
+            bulletPrefabPath="Prefabs/Bullets/Bullet3" hitEffectPrefabPath="Prefabs/Bullets/Hit"
+            lifeTime="6" />
 
         <!-- 右抛物线移动的子弹 -->
-        <BulletData id="3" moveType="ParabolaRight" forwardSpeed="50" rightSpeed="-5" routeSpeed="0"
-            bulletPrefabPath="Prefabs/Bullets/Bullet1" hitEffectPrefabPath="Prefabs/Bullet/Hit"
+        <BulletData id="3" moveType="Parabola" forwardSpeed="50" rightSpeed="0" routeSpeed="30"
+            bulletPrefabPath="Prefabs/Bullets/Bullet2" hitEffectPrefabPath="Prefabs/Bullets/Hit"
+            lifeTime="4" />
+
+        <!-- 左抛物线移动的子弹 -->
+        <BulletData id="4" moveType="Parabola" forwardSpeed="50" rightSpeed="0" routeSpeed="-30"
+            bulletPrefabPath="Prefabs/Bullets/Bullet1" hitEffectPrefabPath="Prefabs/Bullets/Hit"
             lifeTime="4" />
 
         <!-- 跟踪子弹 -->
-        <BulletData id="3" moveType="Tracking" forwardSpeed="40" rightSpeed="0" routeSpeed="40"
-            bulletPrefabPath="Prefabs/Bullets/Bullet1" hitEffectPrefabPath="Prefabs/Bullet/Hit"
+        <BulletData id="5" moveType="Tracking" forwardSpeed="40" rightSpeed="0" routeSpeed="40"
+            bulletPrefabPath="Prefabs/Bullets/Bullet1" hitEffectPrefabPath="Prefabs/Bullets/Hit"
             lifeTime="6" />
     </bulletDatas>
 </BulletDatas>

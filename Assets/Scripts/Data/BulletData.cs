@@ -4,8 +4,8 @@ using System.Xml.Serialization;
 public enum BulletMoveType
 {
     Straight,   // 直线
-    ParabolaLeft,   // 左抛物线
-    ParabolaRight, // 右抛物线
+    Sin, // Sin曲线
+    Parabola,   // 抛物线
     Tracking    // 跟踪
 }
 

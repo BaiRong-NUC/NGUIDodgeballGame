@@ -19,6 +19,15 @@ public class AirPlane : MonoBehaviour
     // 飞机相对于屏幕坐标系的位置
     private Vector3 screenPosition;
 
+    private static AirPlane _instance;
+    public static AirPlane instance => AirPlane._instance;
+
+
+    private void Awake()
+    {
+        _instance = this;
+    }
+
     // 飞机死亡
     public void Dead()
     {
@@ -27,7 +36,7 @@ public class AirPlane : MonoBehaviour
     }
 
     // 飞机受伤
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damage = 1)
     {
         if (isDead) return;
 

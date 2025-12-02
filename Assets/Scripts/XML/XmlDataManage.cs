@@ -128,7 +128,6 @@ public class XmlDataManage
     {
         // 1. 判定文件是否存在
         string path = Application.persistentDataPath + "/" + fileName;
-        Debug.Log("XML数据加载路径: " + path);
         if (!File.Exists(path))
         {
             path = Application.streamingAssetsPath + "/" + fileName; // 从StreamingAssets目录加载默认数据
@@ -138,6 +137,7 @@ public class XmlDataManage
                 return Activator.CreateInstance(type);
             }
         }
+        Debug.Log("XML数据加载路径: " + path);
         // 2. 读取文件
         using (StreamReader reader = new StreamReader(path))
         {

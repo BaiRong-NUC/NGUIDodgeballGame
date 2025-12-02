@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FortDatas>
+    <fortDatas>
+        <FortData id="1" type="Sequence" number="5" cd="0.8" bulletIdRange="1,5" delayTime="8" />
+        <FortData id="2" type="Scatter" number="3" cd="0" bulletIdRange="1,5" delayTime="5" />
+        <FortData id="3" type="Scatter" number="5" cd="1.0" bulletIdRange="1,5" delayTime="6" />
+    </fortDatas>
+</FortDatas>

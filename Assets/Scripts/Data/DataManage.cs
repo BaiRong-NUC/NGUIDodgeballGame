@@ -19,12 +19,16 @@ public class DataManage
     // 子弹数据
     public BulletDatas bulletDatas = new BulletDatas();
 
+    // 开火点数据
+    public FortDatas fortDatas = new FortDatas();
+
     private DataManage()
     {
         this.musicData = XmlDataManage.instance.LoadData(typeof(MusicData), "MusicData.xml") as MusicData;
         this.rankDatas = XmlDataManage.instance.LoadData(typeof(RankDatas), "RankDatas.xml") as RankDatas;
         this.airplaneDatas = XmlDataManage.instance.LoadData(typeof(AirPlaneDatas), "AirplaneDatas.xml") as AirPlaneDatas;
         this.bulletDatas = XmlDataManage.instance.LoadData(typeof(BulletDatas), "BulletDatas.xml") as BulletDatas;
+        this.fortDatas = XmlDataManage.instance.LoadData(typeof(FortDatas), "FortData.xml") as FortDatas;
     }
 
     public void SaveMusicData()

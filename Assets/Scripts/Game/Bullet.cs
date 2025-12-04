@@ -1,10 +1,12 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public BulletData bulletData;
+    public BulletData bulletData = null;
+
 
     // 初始化
     public void InitBullet(BulletData data)
@@ -12,18 +14,13 @@ public class Bullet : MonoBehaviour
         this.bulletData = data;
         // 设置销毁时间
         Invoke("DelayDestory", this.bulletData.lifeTime); // 对象被移除,延迟函数不会进行,避免报错
+        this.Update();
     }
 
     // 延时销毁
     private void DelayDestory()
     {
         Destroy(this.gameObject);
-    }
-
-    // 测试
-    void Start()
-    {
-        this.InitBullet(DataManage.instance.bulletDatas.bulletDatas[4]);
     }
 
     public void Dead()
@@ -65,8 +62,13 @@ public class Bullet : MonoBehaviour
     // 子弹移动
     void Update()
     {
+        if(this.bulletData == null)
+        {
+            // 未初始化数据 直接返回
+            Debug.LogError("子弹未初始化数据");
+            return;
+        }
         this.transform.Translate(Vector3.forward * this.bulletData.forwardSpeed * Time.deltaTime);
-
         //横向移动
         switch (this.bulletData.moveType)
         {

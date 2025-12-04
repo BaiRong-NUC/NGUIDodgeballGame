@@ -8,7 +8,7 @@
 
         <!-- Sin曲线移动子弹 -->
         <BulletData id="2" moveType="Sin" forwardSpeed="50" rightSpeed="4" routeSpeed="20"
-            bulletPrefabPath="Prefabs/Bullets/Bullet3" hitEffectPrefabPath="Prefabs/Bullets/Hit"
+            bulletPrefabPath="Prefabs/Bullets/Bullet2" hitEffectPrefabPath="Prefabs/Bullets/Hit"
             lifeTime="6" />
 
         <!-- 右抛物线移动的子弹 -->

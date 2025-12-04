@@ -37,11 +37,11 @@ public class GamePanel : BasePanel<GamePanel>
         this.currentTime += Time.deltaTime;
         this.timeLabel.text = DataManage.instance.FormatTime((int)this.currentTime, false);
 
-        if(Input.GetMouseButtonDown(0))
-        {
-            // 测试游戏结束面板
-            EndPanel.instance.ShowPanel();
-        }
+        // if(Input.GetMouseButtonDown(0))
+        // {
+        //     // 测试游戏结束面板
+        //     EndPanel.instance.ShowPanel();
+        // }
     }
 
     public void UpdateHp(int hp)

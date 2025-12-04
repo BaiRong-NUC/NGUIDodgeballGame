@@ -187,8 +187,6 @@ public class FortPos : MonoBehaviour
                 this.currentCD = this.currentNum == 0 ? 0 : this.fortData.cd;
                 break;
             case FortType.Scatter:
-                this.currentNum -= 1;
-                this.currentCD = this.currentNum == 0 ? 0 : this.fortData.cd;
                 // 散射子弹
                 if (this.currentCD == 0)
                 {
@@ -202,7 +200,7 @@ public class FortPos : MonoBehaviour
                         bullet.transform.position = this.transform.position;
 
                         this.curDirection = Quaternion.AngleAxis(this.changeAngle * (i + 1), Vector3.up) * this.beginDirection;
-                        print("当前子弹方向:" + this.curDirection);
+                        // print("当前子弹方向:" + this.curDirection);
                     }
                     this.currentNum = 0;
                 }
@@ -211,7 +209,7 @@ public class FortPos : MonoBehaviour
                     // 有cd 分批发射散弹
                     bullet = Instantiate(Resources.Load<GameObject>(this.bulletData.bulletPrefabPath));
                     bullet.AddComponent<Bullet>().InitBullet(this.bulletData);
-                    print("子弹移动类型:" + this.bulletData.moveType);
+                    // print("子弹移动类型:" + this.bulletData.moveType);
 
                     // 计算每颗子弹的朝向与位置
                     bullet.transform.position = this.transform.position;

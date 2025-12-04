@@ -2405,7 +2405,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 323907053}
-  - component: {fileID: 323907054}
   m_Layer: 5
   m_Name: Ships
   m_TagString: Untagged
@@ -2427,19 +2426,6 @@ Transform:
   m_Father: {fileID: 54069512}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &323907054
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 323907052}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 960.7
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &365547750
 GameObject:
   m_ObjectHideFlags: 0

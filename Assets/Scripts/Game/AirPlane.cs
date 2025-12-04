@@ -87,5 +87,22 @@ public class AirPlane : MonoBehaviour
         targetRotation = Quaternion.Euler(0, 0, -h * 30);
         // 平滑旋转到目标角度
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, routeSpeed * Time.deltaTime);
+
+        // 射线检测点击子弹
+        if (Input.GetMouseButtonDown(0))
+        {
+            Ray ray = targetCamera.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit, 1 << LayerMask.NameToLayer("Bullet")))
+            {
+                // print("点击到子弹");
+                Bullet bullet = hit.collider.gameObject.GetComponent<Bullet>();
+                if (bullet != null)
+                {
+                    // 销毁子弹
+                    bullet.Dead();
+                }
+            }
+        }
     }
 }

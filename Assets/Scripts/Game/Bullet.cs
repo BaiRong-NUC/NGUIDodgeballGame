@@ -20,7 +20,7 @@ public class Bullet : MonoBehaviour
     // 延时销毁
     private void DelayDestory()
     {
-        Destroy(this.gameObject);
+        this.Dead();
     }
 
     public void Dead()
